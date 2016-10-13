@@ -1,6 +1,8 @@
 {
   :uk => {
     :pluralize => lambda { |n|      
+      return :other unless n.is_a? Numeric
+
       modulo10 = n.modulo(10)
       modulo100 = n.modulo(100)
       
